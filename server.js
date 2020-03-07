@@ -11,7 +11,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 4000 // This is for socket.io server
 const server = app.listen(PORT, () => {
-    console.log(`listening for socket.io messages on port ${PORTSOCKET}`)
+    console.log(`listening for socket.io messages on port ${PORT}`)
 });
 
 
