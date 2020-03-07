@@ -2,11 +2,13 @@
 
 
 
-const express = require('express')
-const socket = require('socket.io')
-const app = express()
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
+const express = require('express');
+const socket = require('socket.io');
+const app = express();
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 const PORT = process.env.PORT || 4000 // This is for socket.io server
 const server = app.listen(PORT, () => {
     console.log(`listening for socket.io messages on port ${PORTSOCKET}`)
